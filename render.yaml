@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cleantun-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm run seed && npm start
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
