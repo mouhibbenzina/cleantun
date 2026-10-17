@@ -58,3 +58,12 @@ Déploiement gratuit (Render + Vercel) : voir [DEPLOY.md](DEPLOY.md).
 - +10 points : créer un signalement
 - +20 points : signalement résolu
 - `GET /api/leaderboard` : classement des citoyens
+
+## Licence
+
+**© 2026 mouhibbenzina — Tous droits réservés.**
+
+Ce projet est publié à titre de **démonstration et de portfolio uniquement**.
+Toute utilisation, copie, modification, distribution, hébergement ou
+réutilisation commerciale est **interdite sans autorisation écrite préalable**.
+Voir le fichier [LICENSE](LICENSE) pour les détails.
