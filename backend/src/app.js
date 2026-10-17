@@ -14,6 +14,24 @@ app.use(express.json());
 app.use('/uploads', express.static(uploadsDir));
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok', app: 'CleanTun' }));
+
+app.get('/', (_req, res) =>
+  res.json({
+    name: 'CleanTun API',
+    version: '1.0.0',
+    message: 'Signalement citoyen des déchets en Tunisie',
+    endpoints: [
+      'GET  /api/health',
+      'POST /api/auth/register | /api/auth/login',
+      'GET  /api/reports?type=&status=&city=&lat=&lng=&radius=',
+      'POST /api/reports (Bearer + multipart)',
+      'GET  /api/stats | /api/leaderboard',
+      'GET  /api/admin/reports | /api/admin/users (admin)',
+    ],
+    docs: 'https://github.com/mouhibbenzina/cleantun#readme',
+  }),
+);
+
 app.use('/api/auth', authRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/admin', adminRoutes);
